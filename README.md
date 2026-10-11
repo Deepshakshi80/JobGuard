@@ -14,8 +14,7 @@ The model was trained on the **EMSI Fake Job Postings** dataset containing 17,88
 
 ## Live Demo
 
-> Deploy on Render and paste your URL here:
-> **https://jobguard-mo9s.onrender.com**
+🔗 **https://jobguard-mo9s.onrender.com**
 
 ## GitHub Repository
 
