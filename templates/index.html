@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JobGuard – Detect Fake Job Postings</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════ NAVBAR ═══════════════════════════════════════ -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <div class="brand">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <rect width="32" height="32" rx="8" fill="#4f46e5"/>
+        <path d="M16 6l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V10l8-4z" fill="white" opacity="0.9"/>
+        <path d="M13 16l2.5 2.5L20 13" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-name">JobGuard</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#resources">Resources</a></li>
+    </ul>
+    <a href="#check" class="btn-primary nav-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Check a Job Posting
+    </a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════ HERO ═════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <p class="hero-tagline">Stay Alert &bull; Avoid Scams &bull; Build a Safer Career</p>
+      <h1 class="hero-title">
+        Detect <span class="accent">Fake Job Postings</span><br/>With Us
+      </h1>
+      <p class="hero-sub">
+        Analyse job descriptions and identify potentially fraudulent postings.
+        Make smarter and safer career decisions.
+      </p>
+      <div class="hero-badges">
+        <div class="badge">
+          <svg width="20" height="20" fill="#f59e0b" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          <div><strong>Instant Analysis</strong><p>Get results in seconds</p></div>
+        </div>
+        <div class="badge">
+          <svg width="20" height="20" fill="#10b981" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div><strong>ML-Powered</strong><p>Trained on real job data</p></div>
+        </div>
+        <div class="badge">
+          <svg width="20" height="20" fill="#3b82f6" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          <div><strong>Privacy Friendly</strong><p>Your data stays safe</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="card-stack">
+        <div class="job-card real-card">
+          <div class="card-icon">
+            <svg width="22" height="22" fill="#4f46e5" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+          </div>
+          <div class="card-text">
+            <strong>Software Engineer</strong>
+            <span>ABC Tech Solutions</span>
+            <span>2+ years experience</span>
+          </div>
+          <div class="stamp real-stamp">REAL</div>
+        </div>
+        <div class="job-card fake-card">
+          <div class="card-icon alert-icon">
+            <svg width="22" height="22" fill="#ef4444" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13" stroke="white" stroke-width="2"/><line x1="12" y1="17" x2="12.01" y2="17" stroke="white" stroke-width="2"/></svg>
+          </div>
+          <div class="card-text">
+            <strong>Work From Home<br/>High Salary!!!</strong>
+            <span>Immediate Joining</span>
+          </div>
+          <div class="stamp fake-stamp">FAKE</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ MAIN CONTENT ══════════════════════════════════ -->
+<section class="main-content" id="check">
+  <div class="main-grid">
+
+    <!-- LEFT: Checker -->
+    <div class="checker-panel">
+      <div class="panel-header">
+        <svg width="20" height="20" fill="#4f46e5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <div>
+          <h2>Check a Job Posting</h2>
+          <p>Paste the job description below to analyse whether it is real or potentially fake.</p>
+        </div>
+        <button class="btn-clear" id="clearBtn">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 6h18M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6M10 11v6M14 11v6"/></svg>
+          Clear All
+        </button>
+      </div>
+      <div class="textarea-wrap">
+        <textarea id="jobText" placeholder="Enter the job title, company information, job description, requirements, benefits, or any details of the posting…" maxlength="5000"></textarea>
+        <span class="char-count" id="charCount">0/5000 characters</span>
+      </div>
+      <button class="btn-analyse" id="analyseBtn">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        Analyse Job Posting
+      </button>
+
+      <!-- Result panel -->
+      <div class="result-panel" id="resultPanel" style="display:none">
+        <div class="result-header" id="resultHeader">
+          <div class="result-badge" id="resultBadge"></div>
+          <div>
+            <h3 id="resultLabel"></h3>
+            <p id="riskLevel"></p>
+          </div>
+        </div>
+        <div class="prob-bars">
+          <div class="prob-row">
+            <span>Real Probability</span>
+            <div class="bar-track">
+              <div class="bar-fill real-fill" id="realBar"></div>
+            </div>
+            <span id="realPct"></span>
+          </div>
+          <div class="prob-row">
+            <span>Fake Probability</span>
+            <div class="bar-track">
+              <div class="bar-fill fake-fill" id="fakeBar"></div>
+            </div>
+            <span id="fakePct"></span>
+          </div>
+        </div>
+        <div id="flagsSection" class="flags-section" style="display:none">
+          <p class="flags-title">
+            <svg width="14" height="14" fill="none" stroke="#ef4444" stroke-width="2" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+            Suspicious keywords detected:
+          </p>
+          <div id="flagsList" class="flags-list"></div>
+        </div>
+      </div>
+
+      <!-- Loading -->
+      <div class="loading" id="loading" style="display:none">
+        <div class="spinner"></div>
+        <span>Analysing job posting…</span>
+      </div>
+    </div>
+
+    <!-- RIGHT: Examples -->
+    <div class="examples-panel">
+      <div class="panel-header">
+        <svg width="20" height="20" fill="#4f46e5" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        <div><h2>Example Job Postings</h2></div>
+      </div>
+
+      <div class="example-card real-example" id="ex1">
+        <div class="example-meta">
+          <div class="ex-icon real-ex-icon">
+            <svg width="16" height="16" fill="#10b981" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span class="ex-label real-ex-label">Example 1: Legitimate Posting</span>
+          <button class="btn-try real-try" data-example="real">Try Example</button>
+        </div>
+        <p class="ex-text">"We are looking for a Software Engineer with 2+ years of experience in Python. Work on innovative products with a collaborative team…"</p>
+      </div>
+
+      <div class="example-card fake-example" id="ex2">
+        <div class="example-meta">
+          <div class="ex-icon fake-ex-icon">
+            <svg width="16" height="16" fill="none" stroke="#ef4444" stroke-width="2" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <span class="ex-label fake-ex-label">Example 2: Fake Posting</span>
+          <button class="btn-try fake-try" data-example="fake">Try Example</button>
+        </div>
+        <p class="ex-text">"Work from home! Earn Rs 50,000 per week with no experience. Immediate joining. Contact on WhatsApp now!!"</p>
+      </div>
+
+      <!-- Stats Box -->
+      <div class="stats-box">
+        <h3>Model Performance</h3>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <strong id="statAccuracy">98.27%</strong>
+            <span>Accuracy</span>
+          </div>
+          <div class="stat-item">
+            <strong id="statAuc">98.83%</strong>
+            <span>ROC-AUC</span>
+          </div>
+          <div class="stat-item">
+            <strong id="statTotal">17,880</strong>
+            <span>Jobs Trained On</span>
+          </div>
+          <div class="stat-item">
+            <strong id="statFake">866</strong>
+            <span>Fake Jobs in Data</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ INFO CARDS ════════════════════════════════════ -->
+<section class="info-section" id="how-it-works">
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="info-icon indigo-icon">
+        <svg width="22" height="22" fill="none" stroke="#4f46e5" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+      <h4>How It Works</h4>
+      <p>Uses machine learning to analyse text patterns and detect suspicious job postings.</p>
+    </div>
+    <div class="info-card">
+      <div class="info-icon blue-icon">
+        <svg width="22" height="22" fill="none" stroke="#3b82f6" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      </div>
+      <h4>Model Details</h4>
+      <p>Trained on real and fake job postings dataset using NLP and classification models.</p>
+    </div>
+    <div class="info-card">
+      <div class="info-icon purple-icon">
+        <svg width="22" height="22" fill="none" stroke="#7c5cd8" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h4>Why It Matters</h4>
+      <p>Helps job seekers avoid scams and make safer career decisions.</p>
+    </div>
+    <div class="info-card">
+      <div class="info-icon amber-icon">
+        <svg width="22" height="22" fill="none" stroke="#f59e0b" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </div>
+      <h4>Stay Safe</h4>
+      <p>Always verify companies and avoid sharing personal or financial information.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════════════════ -->
+<footer class="footer">
+  <p>&copy; 2024 JobGuard &mdash; Powered by Machine Learning &amp; Python</p>
+  <p class="footer-sub">Dataset: EMSI Fake Job Postings &bull; Model: Logistic Regression + TF-IDF (98.27% accuracy)</p>
+</footer>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
