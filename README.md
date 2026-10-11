@@ -14,8 +14,12 @@ The model was trained on the **EMSI Fake Job Postings** dataset containing 17,88
 
 ## Live Demo
 
-> Deploy on Render and paste your URL here:  
+> Deploy on Render and paste your URL here:
 > **https://jobguard.onrender.com**
+
+## GitHub Repository
+
+🔗 **https://github.com/Deepshakshi80/JobGuard**
 
 ---
 
@@ -89,8 +93,8 @@ jobguard/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/jobguard.git
-cd jobguard
+git clone https://github.com/Deepshakshi80/JobGuard.git
+cd JobGuard
 ```
 
 ### 2. Install dependencies
